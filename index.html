@@ -164,11 +164,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We explore space traffic management as an application of collision-free navigation in multi-agent systems where vehicles have limited observation and communication ranges. We investigate the effectiveness of transferring a collision avoidance multi-agent reinforcement (MARL) model trained on a ground environment to a space one. We demonstrate that the transfer learning model outperforms a model that is trained directly on the space environment. Furthermore, we find that our approach works well even when we consider the perturbations to satellite dynamics caused by the Earth's oblateness. Finally, we show how our methods can be used to evaluate the benefits of information-sharing between satellite operators in order to improve coordination.</h2>
-
-          </p>
-          <p>
-            TODO: paragraph 2
+            We explore space traffic management as an application of collision-free navigation in multi-agent systems where vehicles have limited observation and communication ranges. We investigate the effectiveness of transferring a collision avoidance multi-agent reinforcement (MARL) model trained on a ground environment to a space one. We demonstrate that the transfer learning model outperforms a model that is trained directly on the space environment. Furthermore, we find that our approach works well even when we consider the perturbations to satellite dynamics caused by the Earth's oblateness. Finally, we show how our methods can be used to evaluate the benefits of information-sharing between satellite operators in order to improve coordination.
           </p>
         </div>
       </div>
@@ -178,39 +174,82 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      
-
-  
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            This work is part of a broader research thread around multi-agent coordination with limited information sharing. Other work from the Dynamics INfrastructrue and Mobility Lab (DINaMo) includes
-            <ul>
-              <li><a href="https://nsidn98.github.io/InforMARL/">InforMARL</a> - a generalized multi-agent reinforcement learning approach for ground-based settings .</li>
-              <li><a href="https://dl.acm.org/doi/pdf/10.1145/3702012">FairMARL</a> - a multi-agent reinforcement learning approach to balance fairness in resource-constrainted, limited information systems.</li>
-            </ul>
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
+<!--/ Motivation. -->
+<section class="section" id="Motivation">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Motivation</h2>
+   <p> Space presents many unique challenges that underscore the need for advanced robotics and artificial intelligence. The inherent dangers of space, like radiation, extreme temperatures, and microgravity, make it a hostile environment for human exploration, thus reinforcing the need for robotic systems. As the number of satellites and associated sensing capabilities continues to grow, the resultant amount of data generated far exceeds what human analysts can process. Advancement in satellite autonomy holds the power to address these issues; developing more capable satellites that can independently make decisions on their own can lead to advanced capabilities like conflict negotiation and data curation.
+   </p>
+   <p>
+    One of the pressing needs for satellite autonomy is in space traffic management. Until recently, the annual increase of objects in orbit remained around 300 per year, but factors like increased launch cadence and the emergence of large mega-constellations have led to a marked increase in the overall growth of the space population. The highest spatial density of objects is in the Low Earth Orbit (LEO) environment, a region of space around Earth between altitudes of 160 km and 2,000 km. This increased density has reached a point where satellite interactions are now frequent.  Most simulations and forecasts indicate that the density of objects in LEO will continue to rise because the rate of new launches, on-orbit explosions, and collisions exceeds the LEO environment's natural ability to clean itself through orbital decay \cite{dang-jang}. The increasing accumulation of operational payloads and uncontrollable debris presents a rising collision threat to active satellites, potentially disrupting essential services like communication, weather forecasting, navigation, scientific observation, and human spaceflight missions. 
+  </p>
+  <p>The burdening of manual collision avoidance services motivates the development of autonomous decentralized space traffic management. In contrast to traditional centralized conjunction analysis performed by the 19 SDS, decentralized traffic management refers to a system where the management and coordination of satellite movements are distributed across multiple independent nodes and entities. In such a system, satellites and satellite operators communicate and collaborate directly with one another to ensure safe navigation and avoid conflicts. Decentralized space traffic management services could enhance the resilience and responsiveness of space operations, enabling faster decision-making, reducing single points of failure, and fostering greater collaboration among international stakeholders in a congested space environment.</p>
+  <p>There is a need for research on decentralized space traffic management to explore ways to incentivize the value and adoption of these types of systems. While it is intuitively expected that decentralized coordination among sets of operators could lead to improvements in collision avoidance, there have yet to be developmental frameworks in this area. Space traffic management modeling frameworks are difficult to develop due to the complexity of both the environmental dynamics and the diverse nature of the actors involved.  In this work, we apply multi-agent reinforcement learning to this problem, allowing us to model multiple interacting agents making decisions in a shared environment. </p>
   </div>
 </section>
 
 
-<section class="section" id="BibTeX">
+<!--/ Methods. -->
+<section class="section" id="Methods">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
+    <h2 class="title">Methods</h2>
+
+  </div>
+</section>
+
+<section class="section" id="Comparisons Against Other Methods">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Comparisons Againsts Other Methods</h2>
+    <p>We compare our method with a few different MARL baselines in the rendezvous environment. The following metrics are compared</p>
+     <ul>
+      <li>Total reward obtained in an episode by all the agents (higher is better)</li>
+      <li>Fraction of episode taken by the agents to reach the goal, T (lower is better)</li>
+      <li>The total number of collisions the agents had in an episode, # col (lower is better)</li>
+      <li>Percent of episodes in which all agents get to their goals, S% (higher is better) </li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="section" id="Impact of Sharing Goal Information">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Impact of Sharing Goal-Information</h2>
+     <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+  </div>
+</section>
+
+
+
+<section class="section" id="Conclusions">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Conclusions</h2>
+     <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+  </div>
+</section>
+
+
+<section class="section" id="Future Work">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Future Work</h2>
+     <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="Citation">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Citation</h2>
     <p> If you find our work or code useful in your research, please consider citing the following: </p>
     <pre><code>@article{TODO,
 author={{olan, Sydney and Nayak, Siddharth and Balakrishnan, Hamsa},
@@ -222,6 +261,34 @@ pages={1058–1071}
 }</code></pre>
   </div>
 </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered">
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            This work is part of a broader research thread around multi-agent coordination with limited information sharing. Other work from the Dynamics INfrastructrue and Mobility Lab (DINaMo) includes
+            <ul>
+              <li><a href="https://nsidn98.github.io/InforMARL/">InforMARL</a> - a generalized multi-agent reinforcement learning approach for ground-based settings .</li>
+              <li><a href="https://dl.acm.org/doi/pdf/10.1145/3702012">FairMARL</a> - a multi-agent reinforcement learning approach to balance fairness in resource-constrainted, limited information systems.</li>
+              <li><a href="https://arxiv.org/pdf/2502.00558">asynCoMARLrMARL</a> - a multi-agent reinforcement learning approach that focuses on the problem of coordinating agetns that are working with asynchronous action and communication taking.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+  </div>
+</section>
+
+
 
 
 <section class="section" id="Acknowledgements">
