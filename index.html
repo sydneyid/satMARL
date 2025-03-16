@@ -193,7 +193,7 @@
         alt="TODO: alt text"/>
       <h2 class="subtitle has-text-centered">
           <br/>
-          Graph Neural Network Architectur
+          Graph Neural Network Architecture
         </h2>
 
   </div>
@@ -209,6 +209,16 @@
       <li>The total number of collisions the agents had in an episode, # col (lower is better)</li>
       <li>Percent of episodes in which all agents get to their goals, S% (higher is better) </li>
     </ul>
+    We use the following control tasks:
+    <img src="./static/images/ThreeTaskDescriptions.pdf"
+        class="center-image"
+        alt="TODO: alt text"/>
+    <ul>
+      <li><i>Rendezvous</i> - Each agent tries to reach its preassigned goal  while avoiding collisions with other entities in the environment.</li>
+      <li><i>Cluster Formation</i>There is a single landmark, and the agents try to position themselves in an N-sided regular polygon with the landmark at its center.</li>
+      <li><i>Trailing Formation</i>TThere are two landmarks, and the agents try to position themselves equally spread out in a line between the two</li>
+ </ul>
+
   </div>
 </section>
 
