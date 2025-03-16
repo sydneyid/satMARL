@@ -91,7 +91,7 @@
                   </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/"
+                <a href="https://github.com/sydneyid/satellite-min-info/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -178,11 +178,6 @@
 <section class="section" id="Motivation">
   <div class="container is-max-desktop content">
     <h2 class="title">Motivation</h2>
-   <p> Space presents many unique challenges that underscore the need for advanced robotics and artificial intelligence. The inherent dangers of space, like radiation, extreme temperatures, and microgravity, make it a hostile environment for human exploration, thus reinforcing the need for robotic systems. As the number of satellites and associated sensing capabilities continues to grow, the resultant amount of data generated far exceeds what human analysts can process. Advancement in satellite autonomy holds the power to address these issues; developing more capable satellites that can independently make decisions on their own can lead to advanced capabilities like conflict negotiation and data curation.
-   </p>
-   <p>
-    One of the pressing needs for satellite autonomy is in space traffic management. Until recently, the annual increase of objects in orbit remained around 300 per year, but factors like increased launch cadence and the emergence of large mega-constellations have led to a marked increase in the overall growth of the space population. The highest spatial density of objects is in the Low Earth Orbit (LEO) environment, a region of space around Earth between altitudes of 160 km and 2,000 km. This increased density has reached a point where satellite interactions are now frequent.  Most simulations and forecasts indicate that the density of objects in LEO will continue to rise because the rate of new launches, on-orbit explosions, and collisions exceeds the LEO environment's natural ability to clean itself through orbital decay \cite{dang-jang}. The increasing accumulation of operational payloads and uncontrollable debris presents a rising collision threat to active satellites, potentially disrupting essential services like communication, weather forecasting, navigation, scientific observation, and human spaceflight missions. 
-  </p>
   <p>The burdening of manual collision avoidance services motivates the development of autonomous decentralized space traffic management. In contrast to traditional centralized conjunction analysis performed by the 19 SDS, decentralized traffic management refers to a system where the management and coordination of satellite movements are distributed across multiple independent nodes and entities. In such a system, satellites and satellite operators communicate and collaborate directly with one another to ensure safe navigation and avoid conflicts. Decentralized space traffic management services could enhance the resilience and responsiveness of space operations, enabling faster decision-making, reducing single points of failure, and fostering greater collaboration among international stakeholders in a congested space environment.</p>
   <p>There is work explores the problem of decentralized space traffic management. While it is intuitively expected that decentralized coordination among sets of operators could lead to improvements in collision avoidance, there have yet to be developmental frameworks in this area. In this work, we apply multi-agent reinforcement learning to this problem, allowing us to model multiple interacting agents making decisions in a shared environment. </p>
   </div>
@@ -193,6 +188,13 @@
 <section class="section" id="Methods">
   <div class="container is-max-desktop content">
     <h2 class="title">Methods</h2>
+    <img src="./static/images/GNN_JGCD.pdf"
+        class="center-image"
+        alt="TODO: alt text"/>
+      <h2 class="subtitle has-text-centered">
+          <br/>
+          Graph Neural Network Architectur
+        </h2>
 
   </div>
 </section>
@@ -278,7 +280,7 @@ pages={1058–1071}
             <ul>
               <li><a href="https://nsidn98.github.io/InforMARL/">InforMARL</a> - a generalized multi-agent reinforcement learning approach for ground-based settings .</li>
               <li><a href="https://dl.acm.org/doi/pdf/10.1145/3702012">FairMARL</a> - a multi-agent reinforcement learning approach to balance fairness in resource-constrainted, limited information systems.</li>
-              <li><a href="https://arxiv.org/pdf/2502.00558">asynCoMARLrMARL</a> - a multi-agent reinforcement learning approach that focuses on the problem of coordinating agetns that are working with asynchronous action and communication taking.</li>
+              <li><a href="https://arxiv.org/pdf/2502.00558">asynCoMARL</a> - a multi-agent reinforcement learning approach that focuses on the problem of coordinating agetns that are working with asynchronous action and communication taking.</li>
             </ul>
           </p>
         </div>
