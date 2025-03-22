@@ -189,20 +189,12 @@
 <p><b>Figure 3.</b>Comparison of the training performance of SpaceMARL with the best-performing baselines using global and local information. SpaceMARL significantly outperforms most baseline algorithms. Through the use of transfer learning, where the system is initially trained on a ground environment, and then the weights from that environment are applied to the space environment, we can further stabilize training and performance. While RMAPPO has a similar performance, it requires global information. Refer to the paper for a more extended discussion.</p>
 
 <p>Then, in execution, we compare SpaceMARL against the best performing baseline, RMAPPO in each of the three control tasks. </p>
-<img src="./static/images/Tasks_execution.png" width="450" height="600"
+<img src="./static/images/Tasks_execution.png" width="700"
         class="center-image"
         alt="TODO: alt text"/>
-<p><b>Figure 4.</b>erformance of Global RMAPPO, Local RMAPPO and SpaceMARL on the <i>rendezvous, cluster formation</i>, and <i>trailing formation</i> tasks.</p>
-
-
-
-
+<p><b>Figure 4.</b> Performance of Global RMAPPO, Local RMAPPO and SpaceMARL on the <i>rendezvous, cluster formation</i>, and <i>trailing formation</i> tasks.</p>
 
 </section>
-
-
-
-
 
 <section class="section" id="Impact of Sharing Goal Information">
   <div class="container is-max-desktop content">
@@ -224,24 +216,14 @@
     <h2 class="title">Conclusions</h2>
     We propose SpaceMARL: a multi-agent reinforcement learning method for multi-satellite coordination. We demonstrated
      <ul>
-      <li>Transfer learning from ground-based to space-based environments improves performance, despite different dynamics.</li>
+      <li>The effectiveness of graph transformers to aid in decentralized proximity operations coordination for satellites.</li>
+      <li>Transfer learning from ground-based to space-based environments improves performance in training.</li>
       <li>Goal-sharing among satellites improved safety and path-planning efficiency, reducing traveled distance by 80% and getting closer to goals by 27%.</li>
     </ul>
     Future work includes developing more realistic simulations, accounting for communication delays, adding safety guarantees, and designing incentives for information-sharing.
   </div>
 </section>
 
-
-<section class="section" id="Future Work">
-  <div class="container is-max-desktop content">
-    <h2 class="title">Future Work</h2>
-     <ul>
-      <li>Coffee</li>
-      <li>Tea</li>
-      <li>Milk</li>
-    </ul>
-  </div>
-</section>
 
 <section class="section" id="Citation">
   <div class="container is-max-desktop content">
