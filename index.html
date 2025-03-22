@@ -182,23 +182,38 @@
       <li><i>Cluster Formation</i> - There is a single landmark, and the agents try to position themselves in an N-sided regular polygon with the landmark at its center.</li>
       <li><i>Trailing Formation</i> - There are two landmarks, and the agents try to position themselves equally spread out in a line between the two</li>
  </ul>
-<p>We compare our method against several other MARL baselines in the <i>Rendezvous</i> environment. </p>
-<img src="./static/images/SpaceMARL.pdf"
+<p>We compare our method against several other MARL baselines in the <i>Rendezvous</i> environment during training. </p>
+<img src="./static/images/SpaceMARL.pdf" width="450" height="600"
         class="center-image"
         alt="TODO: alt text"/>
-  </div>
 <p><b>Figure 3.</b>Comparison of the training performance of SpaceMARL with the best-performing baselines using global and local information. SpaceMARL significantly outperforms most baseline algorithms. Through the use of transfer learning, where the system is initially trained on a ground environment, and then the weights from that environment are applied to the space environment, we can further stabilize training and performance. While RMAPPO has a similar performance, it requires global information. Refer to the paper for a more extended discussion.</p>
+
+<p>Then, in execution, we compare SpaceMARL against the best performing baseline, RMAPPO in each of the three control tasks. </p>
+<img src="./static/images/Tasks_execution.png" width="450" height="600"
+        class="center-image"
+        alt="TODO: alt text"/>
+<p><b>Figure 4.</b>erformance of Global RMAPPO, Local RMAPPO and SpaceMARL on the <i>rendezvous, cluster formation</i>, and <i>trailing formation</i> tasks.</p>
+
+
+
+
+
 </section>
+
+
+
 
 
 <section class="section" id="Impact of Sharing Goal Information">
   <div class="container is-max-desktop content">
     <h2 class="title">Impact of Sharing Goal-Information</h2>
-     <ul>
-      <li>Coffee</li>
-      <li>Tea</li>
-      <li>Milk</li>
-    </ul>
+    <p> We use our model to evaluate the value of satellites sharing goal information (i.e., sharing their orbits, and any associated changes) with each other. To do this, we consider the SpaceMARL model that was trained from scratch in the space environment. We alter the previous experimental set-up to focus on $N=2$ satellites. We initialize the satellites such that they both have the same distance to travel to their respective goals. Furthermore, their respective initial positions and goals are set so that their most direct path from the start to the goal intersects with the other satellites midway through their path.</p> 
+    <p>To focus on the information learned directly from sharing, we compare two cases: the first in which the satellites are sharing their goal information with each other (the \emph{sharing} case), and the second in which they are not (the \emph{hidden} case). Goal-sharing can be thought of as a proxy for the future movements of the satellite, as it will seek to move towards the goal over the course of an episode. 
+      <img src="./static/images/Value_sharing.png"    class="center-image"
+      alt="TODO: alt text"/>
+      <p><b>Figure 5.</b>Percentage improvements through goal information-sharing, results are averaged over 100 evaluation episodes.</p>
+
+
   </div>
 </section>
 
@@ -207,11 +222,12 @@
 <section class="section" id="Conclusions">
   <div class="container is-max-desktop content">
     <h2 class="title">Conclusions</h2>
+    We propose SpaceMARL: a multi-agent reinforcement learning method for multi-satellite coordination. We demonstrated
      <ul>
-      <li>Coffee</li>
-      <li>Tea</li>
-      <li>Milk</li>
+      <li>Transfer learning from ground-based to space-based environments improves performance, despite different dynamics.</li>
+      <li>Goal-sharing among satellites improved safety and path-planning efficiency, reducing traveled distance by 80% and getting closer to goals by 27%.</li>
     </ul>
+    Future work includes developing more realistic simulations, accounting for communication delays, adding safety guarantees, and designing incentives for information-sharing.
   </div>
 </section>
 
