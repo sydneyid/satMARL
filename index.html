@@ -154,7 +154,9 @@
 <section class="section" id="Methods">
   <div class="container is-max-desktop content">
     <h2 class="title">Methods</h2>
-    <embed src="./static/images/GNN_JGCD.pdf" type="application/pdf" width="100%" height="600px" />
+    <img src="./static/images/GNN_JGCD.pdf"
+        class="center-image"
+        alt="TODO: alt text"/>
       <p><b>Figure 1.</b>Graph Neural Network Architecture. Each satellite within the environment is represented as a node, and communications between satellites are represented as edges. Each node represents a particular spacecraft, which means that that specific node can encode specific qualities including size of the spacecraft, its capabilities, and its precise location. Each edge represents communication and sensing abilities, so they can encode qualities related to the relative information between two satellites including their relative distances, the areas they have both surveyed or other characteristics associated with path planning. Our graph formulation is dynamic, meaning that the over the course of the simulation, the satellites can adaptively connect and disconnect with one another depending on the satellites ability to sense those in their proximity. We rely on a unified message passing model (UniMP), a variant of a graph transformer, to allow the agents to selectively prioritize messages coming from their neighbors according to their importance. We use multiple layers of this message-passing so that information can be propagated between agents that are higher-order neighbors with each other.  </p>
   </div>
 </section>
@@ -170,11 +172,9 @@
       <li>Percent of episodes in which all agents get to their goals, S% (higher is better) </li>
     </ul>
     
-    <iframe src="./static/images/ThreeTaskDescriptions.pdf"
+    <img src="./static/images/ThreeTaskDescriptions.pdf"
         class="center-image"
-        width="100%"
-        height="600px">
-      </iframe>
+        alt="TODO: alt text"/>
         <p><b>Figure 2.</b> Three Control Tasks test in our algorithm</p>
         We use the following control tasks:
     <ul>
@@ -183,12 +183,9 @@
       <li><i>Trailing Formation</i> - There are two landmarks, and the agents try to position themselves equally spread out in a line between the two</li>
  </ul>
 <p>We compare our method against several other MARL baselines in the <i>Rendezvous</i> environment during training. </p>
-<iframe src="./static/images/SpaceMARL.pdf"
-        width="450"
-        height="600"
+<img src="./static/images/SpaceMARL.pdf" width="450" height="600"
         class="center-image"
-        style="border: none;">
-</iframe>
+        alt="TODO: alt text"/>
 <p><b>Figure 3.</b>Comparison of the training performance of SpaceMARL with the best-performing baselines using global and local information. SpaceMARL significantly outperforms most baseline algorithms. Through the use of transfer learning, where the system is initially trained on a ground environment, and then the weights from that environment are applied to the space environment, we can further stabilize training and performance. While RMAPPO has a similar performance, it requires global information. Refer to the paper for a more extended discussion.</p>
 
 <p>Then, in execution, we compare SpaceMARL against the best performing baseline, RMAPPO in each of the three control tasks. </p>
